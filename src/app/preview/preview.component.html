@@ -1,0 +1,16 @@
+<ngx-datatable
+  #table
+  columnMode="force"
+  class="material fixed-header"
+  [rows]="dataSource"
+  [columns]="displayedColumns"
+>
+</ngx-datatable>
+
+<ng-template #NoData>
+  <div
+    class="flex items-center justify-center text-2xl text-slate-500 w-full mt-3"
+  >
+    <strong>No data...</strong>
+  </div>
+</ng-template>

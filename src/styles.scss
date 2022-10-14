@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "~@swimlane/ngx-datatable/index.css";
+@import "~@swimlane/ngx-datatable/themes/material.scss";
+@import "~@swimlane/ngx-datatable/assets/icons.css";
+
+html,
+body {
+  height: 100%;
+}
+body {
+  background: #333;
+  color: aliceblue;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.ngx-datatable.material .datatable-header .datatable-header-cell {
+  padding: 0.4rem 1rem;
+}
+
+.ngx-datatable.material
+  .datatable-body
+  .datatable-body-row
+  .datatable-body-cell {
+  padding: 0.2rem 1rem;
+}

@@ -1,0 +1,22 @@
+<div class="props-selector-container p-1">
+  <mat-checkbox
+    color="primary"
+    *ngFor="let prop of availableProps"
+    class="example-margin"
+    (change)="onPropChange($event.checked, prop)"
+    >{{ prop }}</mat-checkbox
+  >
+</div>
+
+<button mat-button mat-stroked-button class="mb-2" (click)="scanForDupes()">
+  SCAN FOR DUPLICATES
+</button>
+
+<ngx-datatable
+  #table
+  columnMode="force"
+  class="material fixed-header"
+  [rows]="duplicatedEntries"
+  [columns]="availablePropsTable"
+>
+</ngx-datatable>
